@@ -8,4 +8,8 @@
     <PackageReference Include="LiteDB" Version="5.0.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\KawaiiMoneyManager.Data\KawaiiMoneyManager.Data.csproj" />
+  </ItemGroup>
+
 </Project>

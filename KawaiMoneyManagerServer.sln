@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiMoneyManager", "KawaiMoneyManager\KawaiMoneyManager.csproj", "{DC565E34-8275-4701-9CC3-E0FDDBEAD180}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KawaiiMoneyManager.Data", "KawaiiMoneyManager.Data\KawaiiMoneyManager.Data.csproj", "{1869F6E3-8AF5-46EC-8543-5C4A854B9B2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager.Data", "KawaiiMoneyManager.Data\KawaiiMoneyManager.Data.csproj", "{1869F6E3-8AF5-46EC-8543-5C4A854B9B2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KawaiiMoneyManager.Data.LiteDb", "KawaiiMoneyManager.Data.LiteDb\KawaiiMoneyManager.Data.LiteDb.csproj", "{6E63EAC1-45FC-4E32-9086-A4836EA007EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager.Data.LiteDb", "KawaiiMoneyManager.Data.LiteDb\KawaiiMoneyManager.Data.LiteDb.csproj", "{6E63EAC1-45FC-4E32-9086-A4836EA007EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KawaiiMoneyManager.Data.Tests", "KawaiiMoneyManager.Data.Tests\KawaiiMoneyManager.Data.Tests.csproj", "{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{6E63EAC1-45FC-4E32-9086-A4836EA007EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E63EAC1-45FC-4E32-9086-A4836EA007EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E63EAC1-45FC-4E32-9086-A4836EA007EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
