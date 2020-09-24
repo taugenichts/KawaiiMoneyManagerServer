@@ -1,4 +1,5 @@
-﻿using KawaiiMoneyManager.Data.LiteDb;
+﻿using System;
+using KawaiiMoneyManager.Data.LiteDb;
 using KawaiiMoneyManager.Data.Tests.Helpers;
 using NUnit.Framework;
 using Shouldly;
@@ -55,6 +56,18 @@ namespace KawaiiMoneyManager.Data.Tests
             this.dataService.Delete(entity);
 
             // Assert
+            var deletedEntity = this.dataService.Get(entity.Id);
+            deletedEntity.ShouldBeNull();
+        }
+
+        [Test]
+        public void LiteDbDataService_Cannot_Update_Nonexistent_Entity()
+        {
+            // Set up
+            var entity = new EntityMock { Name = Randomize.String() };
+
+            // Act & Assert
+            Assert.Throws<ArgumentException>(() => this.dataService.Update(entity));
         }
     }
 }
