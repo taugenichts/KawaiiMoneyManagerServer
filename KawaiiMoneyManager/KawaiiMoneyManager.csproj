@@ -1,12 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>KawaiiMoneyManager</AssemblyName>
+    <RootNamespace>KawaiiMoneyManager</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\KawaiiMoneyManager.Data.LiteDb\KawaiiMoneyManager.Data.LiteDb.csproj" />

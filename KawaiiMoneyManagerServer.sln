@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiMoneyManager", "KawaiMoneyManager\KawaiMoneyManager.csproj", "{DC565E34-8275-4701-9CC3-E0FDDBEAD180}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager.Data", "KawaiiMoneyManager.Data\KawaiiMoneyManager.Data.csproj", "{1869F6E3-8AF5-46EC-8543-5C4A854B9B2F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager.Data.LiteDb", "KawaiiMoneyManager.Data.LiteDb\KawaiiMoneyManager.Data.LiteDb.csproj", "{6E63EAC1-45FC-4E32-9086-A4836EA007EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KawaiiMoneyManager.Data.Tests", "KawaiiMoneyManager.Data.Tests\KawaiiMoneyManager.Data.Tests.csproj", "{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager.Data.Tests", "KawaiiMoneyManager.Data.Tests\KawaiiMoneyManager.Data.Tests.csproj", "{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KawaiiMoneyManager.Services", "KawaiiMoneyManager.Services\KawaiiMoneyManager.Services.csproj", "{A42A83AE-7914-4AFB-B8F3-C3883FAD6FAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager", "KawaiiMoneyManager\KawaiiMoneyManager.csproj", "{7871BA53-27E2-4323-8028-1127A94C2076}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager.Services.Tests", "KawaiiMoneyManager.Services.Tests\KawaiiMoneyManager.Services.Tests.csproj", "{D3832292-8EE8-4253-BD18-104E59CB4D11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DC565E34-8275-4701-9CC3-E0FDDBEAD180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC565E34-8275-4701-9CC3-E0FDDBEAD180}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC565E34-8275-4701-9CC3-E0FDDBEAD180}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC565E34-8275-4701-9CC3-E0FDDBEAD180}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1869F6E3-8AF5-46EC-8543-5C4A854B9B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1869F6E3-8AF5-46EC-8543-5C4A854B9B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1869F6E3-8AF5-46EC-8543-5C4A854B9B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +33,18 @@ Global
 		{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42A83AE-7914-4AFB-B8F3-C3883FAD6FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42A83AE-7914-4AFB-B8F3-C3883FAD6FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42A83AE-7914-4AFB-B8F3-C3883FAD6FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42A83AE-7914-4AFB-B8F3-C3883FAD6FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7871BA53-27E2-4323-8028-1127A94C2076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7871BA53-27E2-4323-8028-1127A94C2076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7871BA53-27E2-4323-8028-1127A94C2076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7871BA53-27E2-4323-8028-1127A94C2076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3832292-8EE8-4253-BD18-104E59CB4D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3832292-8EE8-4253-BD18-104E59CB4D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3832292-8EE8-4253-BD18-104E59CB4D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3832292-8EE8-4253-BD18-104E59CB4D11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
