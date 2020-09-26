@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\KawaiiMoneyManager.Data.LiteDb\KawaiiMoneyManager.Data.LiteDb.csproj" />
     <ProjectReference Include="..\KawaiiMoneyManager.Data\KawaiiMoneyManager.Data.csproj" />
+    <ProjectReference Include="..\KawaiiMoneyManager.Services\KawaiiMoneyManager.Services.csproj" />
   </ItemGroup>
 
 

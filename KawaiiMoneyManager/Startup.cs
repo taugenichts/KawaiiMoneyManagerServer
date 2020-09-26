@@ -1,6 +1,7 @@
 using KawaiiMoneyManager.Data;
 using KawaiiMoneyManager.Data.Accounting;
 using KawaiiMoneyManager.Data.LiteDb;
+using KawaiiMoneyManager.Services.Accounting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,8 +24,11 @@ namespace KawaiiMoneyManager
         {
             services.AddControllers();
 
-            // Own services
+            // Data Access
             services.AddScoped<IDataService<Account>, LiteDbDataService<Account>>();
+
+            // Services
+            services.AddScoped<IAccountsService, AccountsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

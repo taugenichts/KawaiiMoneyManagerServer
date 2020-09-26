@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using KawaiiMoneyManager.Data.LiteDb;
 using KawaiiMoneyManager.Data.Tests.Helpers;
 using NUnit.Framework;
@@ -9,7 +10,11 @@ namespace KawaiiMoneyManager.Data.Tests
     [TestFixture]
     internal class DataServiceTests
     {
-        private readonly IDataService<EntityMock> dataService = new LiteDbDataService<EntityMock>("UnitTest.db");
+        private readonly LiteDbDataService<EntityMock> dataService = new LiteDbDataService<EntityMock>("UnitTest.db");
+
+        [SetUp]
+        public void TestSetUp() =>
+            this.dataService.DeleteAll();
 
         [Test]
         public void LiteDbDataService_Can_Create_And_Read_Entity()
@@ -25,6 +30,44 @@ namespace KawaiiMoneyManager.Data.Tests
             readEntity.ShouldNotBeNull();
             readEntity.Id.ShouldBe(entity.Id);
             readEntity.Name.ShouldBe(entity.Name);
+        }
+
+        [Test]
+        public void LiteDbDataService_Can_Get_All_Entities()
+        {
+            // Set up
+            var entity = new EntityMock { Name = Randomize.String() };
+            var entity2 = new EntityMock { Name = Randomize.String() };
+
+            this.dataService.Insert(entity);
+            this.dataService.Insert(entity2);
+
+            // Act
+            var readEntities = this.dataService.GetMany();
+
+            // Assert
+            readEntities.Count().ShouldBe(2);
+            readEntities.Select(e => e.Id).ShouldContain(entity.Id);
+            readEntities.Select(e => e.Id).ShouldContain(entity2.Id);
+        }
+
+        [Test]
+        public void LiteDbDataService_Can_Get_Entities_By_Predicate()
+        {
+            // Set up
+            var entity = new EntityMock { Name = Randomize.String() };
+            var entity2 = new EntityMock { Name = Randomize.String() };
+
+            this.dataService.Insert(entity);
+            this.dataService.Insert(entity2);
+
+            // Act
+            var readEntities = this.dataService.GetMany(e => e.Name == entity2.Name);
+
+            // Assert
+            readEntities.Count().ShouldBe(1);
+            readEntities.Single().Id.ShouldBe(entity2.Id);
+            readEntities.Single().Name.ShouldBe(entity2.Name);
         }
 
         [Test]

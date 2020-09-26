@@ -1,5 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 using LiteDB;
 
 namespace KawaiiMoneyManager.Data.LiteDb
@@ -14,13 +16,14 @@ namespace KawaiiMoneyManager.Data.LiteDb
         public LiteDbDataService(string connection = null) => 
             DatabaseName = connection ?? "KawaiiMoneyManager.db";
 
-
         public T Get(Guid id)
             => this.UseDb(c => c.FindOne(e => e.Id == id));
 
+        public IEnumerable<T> GetMany(Expression<Func<T, bool>> predicate = null) =>
+            this.UseDb(c => (predicate == null ? c.FindAll() : c.Find(predicate)).ToList());
+
         public T Insert(T entity) => 
             this.UseDb(c => c.FindOne(e => e.Id == (Guid)c.Insert(entity)));
-        
 
         public T Update(T entity) =>       
             this.UseDb(c => !c.Update(entity)
@@ -29,6 +32,9 @@ namespace KawaiiMoneyManager.Data.LiteDb
 
         public void Delete(T entity) =>
             this.UseDb<bool>(c => c.Delete(new BsonValue(entity.Id)));
+
+        public void DeleteAll() =>
+            this.UseDb(c => c.DeleteAll());
         
         private TReturn UseDb<TReturn>(Func<ILiteCollection<T>, TReturn> a)
         {
