@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager.Data.Lit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager.Data.Tests", "KawaiiMoneyManager.Data.Tests\KawaiiMoneyManager.Data.Tests.csproj", "{C6404EAB-FC9A-4B89-84F7-7BE1EA8B74ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KawaiiMoneyManager.Services", "KawaiiMoneyManager.Services\KawaiiMoneyManager.Services.csproj", "{A42A83AE-7914-4AFB-B8F3-C3883FAD6FAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager.Services", "KawaiiMoneyManager.Services\KawaiiMoneyManager.Services.csproj", "{A42A83AE-7914-4AFB-B8F3-C3883FAD6FAD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager", "KawaiiMoneyManager\KawaiiMoneyManager.csproj", "{7871BA53-27E2-4323-8028-1127A94C2076}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KawaiiMoneyManager.Services.Tests", "KawaiiMoneyManager.Services.Tests\KawaiiMoneyManager.Services.Tests.csproj", "{D3832292-8EE8-4253-BD18-104E59CB4D11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KawaiiMoneyManager.Requirements", "KawaiiMoneyManager.Requirements\KawaiiMoneyManager.Requirements.csproj", "{7121B60A-03D9-47BE-9D9C-AD54557A3160}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D3832292-8EE8-4253-BD18-104E59CB4D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3832292-8EE8-4253-BD18-104E59CB4D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3832292-8EE8-4253-BD18-104E59CB4D11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7121B60A-03D9-47BE-9D9C-AD54557A3160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7121B60A-03D9-47BE-9D9C-AD54557A3160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7121B60A-03D9-47BE-9D9C-AD54557A3160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7121B60A-03D9-47BE-9D9C-AD54557A3160}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
